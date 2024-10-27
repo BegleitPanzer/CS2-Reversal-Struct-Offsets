@@ -12,3 +12,19 @@
     const std::string PlantedC4 = "48 8B 15 ?? ?? ?? ?? FF C0 48 8D 4C 24 40";
     const std::string InputSystem = "48 89 05 ?? ?? ?? ?? 48 8D 05";
 ```
+
+```
+    globalvars - 48 89 15 ? ? ? ? 48 89 42 (not updated)
+    local_player_controller - 48 8B 05 ? ? ? ? 48 85 C0 74 ? 8B 90
+    input - 48 8B 0D ? ? ? ? 4C 8D 8F ? ? ? ? 45 33 FF
+    matrix_for_view - 40 53 48 81 EC ? ? ? ? 49 8B C1 (not updated)
+    get_base_entity - 40 53 48 81 EC ? ? ? ? 48 8B 0D ? ? ? ? 48 8D 94 24 ? ? ? ?
+    on_render_start - 48 89 5C 24 ? 48 89 6C 24 ? 56 57 41 56 48 81 EC ? ? ? ? 4C 8B F1 48 8D 94 24
+    get_view_angles - 4C 8B C1 85 D2 74 ? 48 8D 05
+    get_bone_index - E8 ? ? ? ? 85 C0 78 ? 4C 8D 4D (maybe not correct)
+    level_init - 48 89 5C 24 ? 56 48 83 EC ? 48 8B 0D ? ? ? ? 48 8B F2
+    level_shutdown - 48 89 74 24 ?? 57 48 83 EC ?? 48 8B F9 E8 ?? ?? ?? ?? 48 8D 8F
+    fov_object - 40 53 48 83 EC ? 48 8B D9 E8 ? ? ? ? 48 85 C0 74 ? 48 8B C8 48 83 C4 (not updated)
+
+    10/26/24
+```
